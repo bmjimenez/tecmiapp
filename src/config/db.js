@@ -29,7 +29,7 @@ const connectDB = async () => {
     await sequelize.sync({ alter: true })
     console.log('📊 Base de datos sincronizada')
 
-    // Nota: Usa los scripts seedServices.js y createSuperAdmin.js para insertar datos
+    // Datos de ejemplo insertados automáticamente
     console.log('🔄 Ejecutando insertSampleData...')
     await insertSampleData()
     console.log('✅ insertSampleData completado')
@@ -42,8 +42,7 @@ const connectDB = async () => {
   }
 }
 
-// Función para insertar datos de ejemplo (MEJORADA PARA DOCKER)
-// Ahora se usan los scripts: createSuperAdmin.js y seedServices.js
+// Función para insertar datos de ejemplo automáticamente en Docker
 const insertSampleData = async () => {
   console.log('🚀 INICIO insertSampleData')
   try {
